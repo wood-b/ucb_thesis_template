@@ -9,7 +9,19 @@
 \usepackage{rotating} % provides sidewaystable and sidewaysfigure
 \usepackage{textcomp} % degrees symbol
 \usepackage{siunitx} % units
-\usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig, mathtools}
+\usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig}
+\usepackage{booktabs, threeparttable, multirow} % Make pretty tables
+\usepackage{caption} % for tables and figures
+\captionsetup[table]{skip=4pt} % sets a default padding for tables
+\usepackage{dsfont} % matrix notation
+\usepackage{xr} %cross ref between files
+
+% the code below is make a abs symbol and fraction without the bar
+\usepackage{mathtools}
+\DeclareRobustCommand\bfrac[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+% end of abs and custom frac
 
 % hyperref colors
 %\hypersetup{
@@ -17,8 +29,7 @@
   %citecolor=violet,
   %linkcolor=black,
   %urlcolor=blue}
-\hypersetup{colorlinks=true, citecolor=green, linkcolor=black, urlcolor=blue}
-  
+\hypersetup{colorlinks=true, citecolor=black, linkcolor=black, urlcolor=blue}
 
 % To compile this file, run "latex thesis", then "biber thesis"
 % (or "bibtex thesis", if the output from latex asks for that instead),
@@ -36,7 +47,7 @@
 
 \newtheorem{theorem}{Jibberish}
 
-\bibliography{aroma_7}
+\bibliography{thesis_1}
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
@@ -50,9 +61,9 @@
 \degreesemester{Summer}
 \degreeyear{2019}
 \degree{Doctor of Philosophy}
-\chair{Associate Professor Kristin Persson}
-\othermembers{The Aldo DeBenedictis Distinguished Professor Phillip Geissler\\ 
-Professor Daryl Chrzan}
+\chair{Professor Kristin A. Persson}
+\othermembers{Professor Phillip L. Geissler\\
+Professor Daryl C. Chrzan}
 
 
 % For a co-chair who is subordinate to the \chair listed above
@@ -88,7 +99,7 @@ Professor Daryl Chrzan}
 \begin{dedication}
 \null\vfil
 \begin{center}
-To Mom\\\vspace{12pt}
+To Mom, Dad, and Linds\\\vspace{12pt}
 \end{center}
 \vfil\null
 \end{dedication}
@@ -120,9 +131,10 @@ Thank everyone here
 %\include{chap1}
 %\include{chap2}
 
-\printbibliography
-
-% \appendix
+\appendix
+\include{appendix_tor_model}
+\include{appendix_aroma}
 % \chapter{More Monticello Candidates}
+\printbibliography
 
 \end{document}
