@@ -11,6 +11,8 @@
 \usepackage{siunitx} % units
 \usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig}
 \usepackage{booktabs, threeparttable, multirow} % Make pretty tables
+\usepackage{caption} % for tables and figures
+\captionsetup[table]{skip=4pt} % sets a default padding for tables
 \usepackage{dsfont} % matrix notation
 
 % the code below is make a abs symbol and fraction without the bar
@@ -26,7 +28,7 @@
   %citecolor=violet,
   %linkcolor=black,
   %urlcolor=blue}
-\hypersetup{colorlinks=true, citecolor=green, linkcolor=black, urlcolor=blue}
+\hypersetup{colorlinks=true, citecolor=black, linkcolor=black, urlcolor=blue}
 
 
 % To compile this file, run "latex thesis", then "biber thesis"
@@ -59,8 +61,8 @@
 \degreesemester{Summer}
 \degreeyear{2019}
 \degree{Doctor of Philosophy}
-\chair{Associate Professor Kristin Persson}
-\othermembers{The Aldo DeBenedictis Distinguished Professor Phillip Geissler\\
+\chair{Professor Kristin A. Persson}
+\othermembers{Professor Phillip Geissler\\
 Professor Daryl Chrzan}
 
 
@@ -129,11 +131,10 @@ Thank everyone here
 %\include{chap1}
 %\include{chap2}
 
-\printbibliography
-
 \appendix
 \include{appendix_tor_model}
 \include{appendix_aroma}
 % \chapter{More Monticello Candidates}
+\printbibliography
 
 \end{document}
