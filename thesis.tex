@@ -9,7 +9,16 @@
 \usepackage{rotating} % provides sidewaystable and sidewaysfigure
 \usepackage{textcomp} % degrees symbol
 \usepackage{siunitx} % units
-\usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig, mathtools}
+\usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig}
+\usepackage{booktabs, threeparttable, multirow} % Make pretty tables
+\usepackage{dsfont} % matrix notation
+
+% the code below is make a abs symbol and fraction without the bar
+\usepackage{mathtools}
+\DeclareRobustCommand\bfrac[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+% end of abs and custom frac
 
 % hyperref colors
 %\hypersetup{
@@ -36,7 +45,7 @@
 
 \newtheorem{theorem}{Jibberish}
 
-\bibliography{aroma_7}
+\bibliography{thesis_1}
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
@@ -123,6 +132,7 @@ Thank everyone here
 \printbibliography
 
 \appendix
+\include{appendix_tor_model}
 \include{appendix_aroma}
 % \chapter{More Monticello Candidates}
 
