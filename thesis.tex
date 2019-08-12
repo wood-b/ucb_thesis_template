@@ -6,6 +6,7 @@
 
 \documentclass{ucbthesis}
 \usepackage{biblatex}
+%\usepackage[backend=biber, citestyle=phys]{biblatex}
 \usepackage{rotating} % provides sidewaystable and sidewaysfigure
 \usepackage{textcomp} % degrees symbol
 \usepackage{siunitx} % units
@@ -47,7 +48,8 @@
 
 \newtheorem{theorem}{Jibberish}
 
-\bibliography{thesis_1}
+%\bibliography{thesis_1}
+\addbibresource{thesis_1.bib}
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
@@ -56,7 +58,7 @@
 
 % Declarations for Front Matter
 
-\title{Structural Insights for Molecular Design of Conjugated Molecule and Polymers}
+\title{Structural Insights for Molecular Design of Conjugated Molecules and Polymers}
 \author{Brandon Wood}
 \degreesemester{Summer}
 \degreeyear{2019}
