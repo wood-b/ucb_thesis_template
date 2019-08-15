@@ -200,7 +200,7 @@
 \subsection{The Effect of Chain Length on Ground-state Torsion Angles}
 \label{subsec:chain_length_gs}
 
-Different polythiophene (PT) chain lengths were optimized at the RI-MP2 level (Figure \ref{tab:gs_RIMP2}). In all instances the optimized structures had non-planar central torsion angles corresponding to minima observed in Figure \ref{fig:gs_theory}. Additionally, the energy of optimized planar (trans) configurations were higher than that of optimized non-planar configurations. This evidence supports DuBay et al. in their claim that the torsion potential of conjugated polymers such as PT can be approximated by the dimer torsion potential if an appropriate level of theory, basis set, and optimization procedure are used.\cite{Dubay2012}
+Different polythiophene (PT) chain lengths were optimized at the RI-MP2 level (Table~\ref{tab:gs_RIMP2}). In all instances the optimized structures had non-planar central torsion angles corresponding to minima observed in Figure \ref{fig:gs_theory}. Additionally, the energy of optimized planar (trans) configurations were higher than that of optimized non-planar configurations. This evidence supports DuBay et al. in their claim that the torsion potential of conjugated polymers such as PT can be approximated by the dimer torsion potential if an appropriate level of theory, basis set, and optimization procedure are used.\cite{Dubay2012}
 
 \begin{table}[hbt!]\centering
 \caption{Ground-state Optimized Geometries}
@@ -228,7 +228,7 @@ Different polythiophene (PT) chain lengths were optimized at the RI-MP2 level (F
 \subsection{The Effect of Chain Length on Doped Torsion Potentials}
 \label{subsec:chain_length_cat}
 
-The impact of chain length was investigated for doped torsion potentials to address concerns about charge and spin localization. In the end, the dimer approximation was suitable as it was in the ground state. The relaxation procedure detailed in the main text was altered for doped chains longer than $n = 4$ due to the polaron shifting away from the central torsion of interest for non-planar configurations. Shifting of the polaron can be seen in figures \ref{fig:n6_bl} and \ref{fig:n8_bl} where the bond length distortion moves from the center to one of edges, while the $N = 2$ and $N = 4$ chains were too short for the polaron to have anywhere to shift (Figure \ref{fig:n2_bl} and \ref{fig:n4_bl}). The modified relaxation procedure for the $N = 6$ and $N = 8$ doped chains consisted of an initial geometry optimization followed by single point energy calculations at each torsional configuration. This procedure maintained the position of the polaron on the central torsion angle of interest.
+The impact of chain length was investigated for doped torsion potentials to address concerns about charge and spin localization. In the end, the dimer approximation was suitable as it was in the ground state. The relaxation procedure detailed in the main text was altered for doped chains longer than $n = 4$ due to the polaron shifting away from the central torsion of interest for non-planar configurations. Shifting of the polaron can be seen in Figs.~\ref{fig:n6_bl} and \ref{fig:n8_bl} where the bond length distortion moves from the center to one of edges, while the $N = 2$ and $N = 4$ chains were too short for the polaron to have anywhere to shift (Figs. \ref{fig:n2_bl} and \ref{fig:n4_bl}). The modified relaxation procedure for the $N = 6$ and $N = 8$ doped chains consisted of an initial geometry optimization followed by single point energy calculations at each torsional configuration. This procedure maintained the position of the polaron on the central torsion angle of interest.
 
 \begin{figure}[hbt!]
     \centering
@@ -601,13 +601,13 @@ The code used to generate chain conformations and collect chain statistics is fr
 \label{sec:lp}
 \begin{equation}
 \Large
-\Big \langle \large \hat{\nu_i} \cdot \hat{\nu_j} \Big \rangle = \exp{\bigg(-\frac{N}{\chi l_{N}}\bigg)}
+\Big \langle \large \hat{\nu_i} \cdot \hat{\nu_{i+n}} \Big \rangle = \exp{\bigg(-\frac{n}{\chi l_{n}}\bigg)}
 \label{eq:lN}
 \end{equation}
 
 \subsection{Tangent-tangent Correlation Function}
 
-The tangent-tangent correlation function (eq. \ref{eq:lp}) can be rewritten into a form (SI eq. \ref{eq:lN}) that is easier to employ in practice by utilizing $L \approx m_lN$ and $l_p = m_ll_N$. The variable $l_N$ is the persistence length in monomer units ($N$). Additionally, the tangent-tangent correlation function can be normalized to decay from 1 by using unit backbone vectors ($\hat{\nu}$). Final $l_p$ values were computed by exponentially fitting the tangent-tangent correlation function \ref{eq:lN} and dimensionalizing $l_N$ using the relationship $l_p = m_ll_N$.
+The tangent-tangent correlation function (eq. \ref{eq:lp}) can be rewritten into a form (SI eq.~\ref{eq:lN}) that is easier to employ in practice by utilizing $L \approx m_ln$ and $l_p = m_ll_n$. The variable $l_n$ is the persistence length in monomer units ($n$). Additionally, the tangent-tangent correlation function can be normalized to decay from 1 by using unit backbone vectors ($\hat{\nu}$). Final $l_p$ values were computed by exponentially fitting the tangent-tangent correlation function \ref{eq:lN} and dimensionalizing $l_n$ using the relationship $l_p = m_ll_n$.
 
 \subsection{Worm-like Chain Fitting}
 
