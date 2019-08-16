@@ -12,7 +12,7 @@
 \begin{figure}[hbt!]
     \centering
     \includegraphics{figures/append_aroma/p_tor_compare_copy.pdf}
-    \caption[Torsion Potential of Different Length Thiophene Oligomers]{The torsion potential of N2, N4, and N8 thiophene oligomers. All calculations were performed using the $\omega$B97x-D functional. The N2 torsion potential was calculated with the def2-TZVPP basis set, while N4 and N8 utilized the 6-31++G** \cite{Hehre1972} basis set to reduce to the computational cost. The deviation of N2 from both N4 and N8 between 0 and 50\textdegree \ is likely due to the different basis sets employed.}
+    \caption[Torsion Potential of Different Length Thiophene Oligomers]{The torsion potential of N2, N4, and N8 thiophene oligomers. All calculations were performed using the $\omega$B97x-D functional. The N2 torsion potential was calculated with the def2-TZVPP basis set, while N4 and N8 utilized the 6-31++G** \cite{Hehre1972} basis set to reduce the computational cost. The deviation of N2 from both N4 and N8 between 0 and 50\textdegree \ is likely due to the different basis sets employed.}
     \label{fig:p_tor_compare}
 \end{figure}
 
@@ -21,7 +21,7 @@
 \begin{figure}[hbt!]
     \centering
     \includegraphics{figures/append_aroma/p_NICS_compare_copy.pdf}
-    \caption[Aromaticity of Different Length Thiophene Oligomers ]{N2, N4, and N8 absolute NICS $1_{ZZ}$ values as a function of torsion angle. The magnitude of NICS values decrease with chain length, and we expect that the values will converge once a certain chain length is reached. While the magnitude decreases the overall trend as a function of torsion angle is consistent, which allows N2 to represent larger chains.}
+    \caption[Aromaticity of Different Length Thiophene Oligomers ]{N2, N4, and N8 absolute NICS $1_{ZZ}$ values as a function of torsion angle. The magnitude of NICS values decreases with chain length, and we expect that the values will converge once a certain chain length is reached. While the magnitude decreases the overall trend as a function of torsion angle is consistent, which allows N2 to represent larger chains.}
     \label{fig:p_NICS_compare}
 \end{figure}
 
@@ -93,7 +93,7 @@
 \begin{figure}[hbt!]
     \centering
     \includegraphics{figures/append_aroma/ts_2t_f1_copy.pdf}
-    \caption[\texorpdfstring{F $\cdots$ S}{FS} 2F Through-space Calculation]{A potential energy scan of the interatomic separation distance between a fluoride and a sulfur atom on a fluorinated thiophene molecules. The orange dot represents the relaxed F $\cdots$ S distance on a trans (180\textdegree) F2-BT molecule. This indicates that the F $\cdots$ S through-space interaction is repulsive in trans F2-BT.}
+    \caption[\texorpdfstring{F $\cdots$ S}{FS} 2F Through-space Calculation]{A potential energy scan of the interatomic separation distance between a fluoride and a sulfur atom on fluorinated thiophene molecules. The orange dot represents the relaxed F $\cdots$ S distance on a trans (180\textdegree) F2-BT molecule. This indicates that the F $\cdots$ S through-space interaction is repulsive in trans F2-BT.}
     \label{fig:ts_2t_f1}
 \end{figure}
 \clearpage
@@ -111,7 +111,7 @@
 \begin{figure}[hbt!]
     \centering
     \includegraphics{figures/append_aroma/ts_t_edot_copy.pdf}
-    \caption[\texorpdfstring{O $\cdots$ S}{OS} Through-space Calculation]{A potential energy scan of the interatomic separation distance between a oxygen and a sulfur atom on an EDOT and thiophene molecule respectively. The thiophene molecule has been rotated such that the ring is perpendicular to the EDOT, this is done to minimize secondary H $\cdots$ S interactions. The orange dot represents the relaxed O $\cdots$ S distance on a trans (180\textdegree) BEDOT molecule. This indicates that the O $\cdots$ S through-space interaction is repulsive in trans BEDOT.}
+    \caption[\texorpdfstring{O $\cdots$ S}{OS} Through-space Calculation]{A potential energy scan of the interatomic separation distance between an oxygen and a sulfur atom on an EDOT and a thiophene molecule respectively. The thiophene molecule has been rotated such that the ring is perpendicular to the EDOT, this is done to minimize secondary H $\cdots$ S interactions. The orange dot represents the relaxed O $\cdots$ S distance on a trans (180\textdegree) BEDOT molecule. This indicates that the O $\cdots$ S through-space interaction is repulsive in trans BEDOT.}
     \label{fig:ts_t_edot}
 \end{figure}
 \clearpage
@@ -154,13 +154,13 @@
 Additional torsional constraints were placed on the hBT dimer during geometry optimizations to prevent ring distortion. The intent of hydrogenation was to remove aromaticity, while maintaining conjugation across the central C-C bond between rings. Ring distortion is an unintended consequence of hydrogenation and does not represent the physics of interest. As a result, the intra-ring C-C-C-C torsion angle for each thiophene ring was fixed at its undistorted state (roughly 0\textdegree), in addition to the central inter-ring C-C-C-C torsion angle being fixed at the desired angle within the potential energy scan. In sum, geometry optimizations for the hBT dimer had 3 torsional constraints, 2 intra-ring and 1 inter-ring, whereas all other degrees of freedom were allowed to relax.
 
 \subsection{NICS Calculations}
-NICS values were computed by placing fictitious hydrogen atoms (designated H-Bq in Gaussian) 1\si{\angstrom} above the center of each ring, followed by an NMR calculation with Gaussian16 \cite{g16}. The largest eigenvalue of the magnetic shielding tensor for the fictitious H atom was taken as the NICS $1_{ZZ}$ value in ppm. Conventionally, the sign of NICS values are reversed for comparison with experimental NMR values. In this work we do not reverse the sign and report the absolute NICS $1_{ZZ}$ value ($\abs*{NICS 1_{ZZ}}$) for easy comparison with MCI aromaticity values. Specific details on the NICS method have been described elsewhere \cite{Fallah-Bagher-Shaidaei2006, Chen2005}.
+NICS values were computed by placing fictitious hydrogen atoms (designated H-Bq in Gaussian) 1\si{\angstrom} above the center of each ring, followed by an NMR calculation with Gaussian16 \cite{g16}. The largest eigenvalue of the magnetic shielding tensor for the fictitious H atom was taken as the NICS $1_{ZZ}$ value in ppm. Conventionally, the sign of NICS values is reversed for comparison with experimental NMR values. In this work we do not reverse the sign and report the absolute NICS $1_{ZZ}$ value ($\abs*{NICS 1_{ZZ}}$) for easy comparison with MCI aromaticity values. Specific details on the NICS method have been described elsewhere \cite{Fallah-Bagher-Shaidaei2006, Chen2005}.
 
 \subsection{Through-space Calculations}
 All through-space potential energy scans utilized counterpoise corrected energies as implementation in Gaussian16. Methodology of through-space calculations has been described by others \cite{Jackson2013}.
 
 \subsection{NCI Analysis}
-NCI analysis was preformed with NCIplot \cite{Johnson2010, Contreras-Garcia2011}. The only deviation from standard procedure was adding a radius cutoff to investigate local interactions (i.e. X $\cdots$ S). For these calculations a point was specified roughly half way between the two atoms with a radius cutoff of 2\AA.
+NCI analysis was performed with NCIplot \cite{Johnson2010, Contreras-Garcia2011}. The only deviation from standard procedure was adding a radius cutoff to investigate local interactions (i.e. X $\cdots$ S). For these calculations a point was specified roughly half way between the two atoms with a radius cutoff of 2\AA.
 
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,7 +214,7 @@ NCI analysis was preformed with NCIplot \cite{Johnson2010, Contreras-Garcia2011}
 \renewcommand{\arraystretch}{1.5}
 \begin{threeparttable}
 \begin{tabular}{ccccc}\toprule
-{} & {Atom} & {x (\AA)} & {y (\AA)} & {z (\AA)} \\ \midrule
+{} & {Atom} & {X (\AA)} & {Y (\AA)} & {Z (\AA)} \\ \midrule
     1 & S & 0.001 & -0.024 & -0.030\\
     2 & C & 1.708 & -0.014 & -0.014\\
     3 & H & 2.244 & -0.025 & 0.920\\
@@ -286,7 +286,7 @@ NCI analysis was preformed with NCIplot \cite{Johnson2010, Contreras-Garcia2011}
 \renewcommand{\arraystretch}{1.5}
 \begin{threeparttable}
 \begin{tabular}{ccccc}\toprule
-{} & {Atom} & {x (\AA)} & {y (\AA)} & {z (\AA)} \\ \midrule
+{} & {Atom} & {X (\AA)} & {Y (\AA)} & {Z (\AA)} \\ \midrule
     1 & S & -0.040 & 0.163 & 0.023\\
     2 & C & 1.764 & 0.408 & -0.006\\
     3 & C & 2.271 & -0.288 & -1.271\\
@@ -363,7 +363,7 @@ NCI analysis was preformed with NCIplot \cite{Johnson2010, Contreras-Garcia2011}
 \renewcommand{\arraystretch}{1.5}
 \begin{threeparttable}
 \begin{tabular}{ccccc}\toprule
-{} & {Atom} & {x (\AA)} & {y (\AA)} & {z (\AA)} \\ \midrule
+{} & {Atom} & {X (\AA)} & {Y (\AA)} & {Z (\AA)} \\ \midrule
     1 & S & 0.037 & -0.486 & -0.078\\
     2 & C & 1.727 & -0.266 & -0.036\\
     3 & H & 2.270 & -0.443 & 0.877\\
@@ -475,7 +475,7 @@ NCI analysis was preformed with NCIplot \cite{Johnson2010, Contreras-Garcia2011}
 \renewcommand{\arraystretch}{1.25}
 \begin{threeparttable}
 \begin{tabular}{ccccc}\toprule
-{} & {Atom} & {x (\AA)} & {y (\AA)} & {z (\AA)} \\ \midrule
+{} & {Atom} & {X (\AA)} & {Y (\AA)} & {Z (\AA)} \\ \midrule
     1 & S & 0.212 & -0.710 & -0.167\\
     2 & C & 1.900 & -0.439 & -0.177\\
     3 & H & 2.495 & -0.581 & 0.709\\
@@ -599,7 +599,7 @@ NCI analysis was preformed with NCIplot \cite{Johnson2010, Contreras-Garcia2011}
 \renewcommand{\arraystretch}{1.5}
 \begin{threeparttable}
 \begin{tabular}{ccccc}\toprule
-{} & {Atom} & {x (\AA)} & {y (\AA)} & {z (\AA)} \\ \midrule
+{} & {Atom} & {X (\AA)} & {Y (\AA)} & {Z (\AA)} \\ \midrule
    1 & S & 0.027 & -0.481 & -0.106\\
     2 & C & 1.720 & -0.267 & -0.041\\
     3 & H & 2.251 & -0.447 & 0.878\\
@@ -671,7 +671,7 @@ NCI analysis was preformed with NCIplot \cite{Johnson2010, Contreras-Garcia2011}
 \renewcommand{\arraystretch}{1.5}
 \begin{threeparttable}
 \begin{tabular}{ccccc}\toprule
-{} & {Atom} & {x (\AA)} & {y (\AA)} & {z (\AA)} \\ \midrule
+{} & {Atom} & {X (\AA)} & {Y (\AA)} & {Z (\AA)} \\ \midrule
 1 & S & -0.024 & -0.016 & -0.026\\
 2 & C & 1.685 & -0.031 & 0.011\\
 3 & H & 2.237 & -0.073 & 0.933\\
