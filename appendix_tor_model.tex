@@ -255,11 +255,11 @@ The impact of chain length was investigated for doped torsion potentials to addr
 \begin{threeparttable}
 \begin{tabular}{cccc}\toprule
   {Number of Monomers} & {$\Delta E_{ \ Cis - Trans}$ (eV)} \\ \midrule
-    2 & 0.02079\tnote{a}\\
-    2 & 0.02162\tnote{b}\\
-    4 & 0.01260\tnote{b}\\
-    6 & 0.01633\tnote{b}\\
-    8 & 0.01905\tnote{b}\\ \bottomrule
+    2 & 0.0208\tnote{a}\\
+    2 & 0.0216\tnote{b}\\
+    4 & 0.0126\tnote{b}\\
+    6 & 0.0163\tnote{b}\\
+    8 & 0.0191\tnote{b}\\ \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \item[a] \footnotesize Functional: $\omega$B97-mv basis set: def2-QZVPPD
@@ -313,10 +313,10 @@ Previous work on organic conjugated molecules demonstrated that RO-DFT and UO-DF
 \begin{tabular}{cccc}\toprule
 \multicolumn{1}{c}{\multirow{1}{3.5cm}{\centering }} &
 \multicolumn{1}{c}{\multirow{1}{3.5cm}{\centering $\Delta E_{\ Cis - Trans}$ (eV)}} \\ \midrule
-    TDDFT\tnote{\textdagger} & 0.02137\\
-    UO-DFT\tnote{\textdagger} & 0.01338\\
-    UO-DFT\tnote{*} & 0.01269\\
-    RO-DFT\tnote{*} & 0.01609\\ \bottomrule
+    TDDFT\tnote{\textdagger} & 0.0214\\
+    UO-DFT\tnote{\textdagger} & 0.0134\\
+    UO-DFT\tnote{*} & 0.0127\\
+    RO-DFT\tnote{*} & 0.0161\\ \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \item[\textdagger] \footnotesize Functional: $\omega$B97-xd basis set: 6-31++G**
@@ -598,10 +598,11 @@ To reduce computational burden and make the algorithm as general as possible ato
 \subsection{Code}
 The code used to generate chain conformations and collect chain statistics is freely available at \url{https://github.com/wood-b/dihedral_model}.
 
+\clearpage
+
 \section{Persistence Length \& End-to-end Distance}
 \label{sec:lp}
 \begin{equation}
-\Large
 \Big \langle \large \hat{\nu_i} \cdot \hat{\nu_{i+n}} \Big \rangle = \exp{\bigg(-\frac{n}{\chi l_{n}}\bigg)}
 \label{eq:lN}
 \end{equation}
@@ -617,7 +618,6 @@ End-to-end distances ($\sqrt{\big \langle R^2 \big \rangle}$) generated from the
 After comparing end-to-end distances of the WLC-3D, WLC-2D, and the torsion potential model it was clear that $l_p$ values for the torsion potential model could be improved by fitting $\chi$. $\chi$ values were determined by the ratio of the 3D-WLC $\big \langle R^2 \big \rangle$ and the torsion potential model $\big \langle R^2 \big \rangle$ at $N = 200$ for all values of $\alpha$ (Tables \ref{tab:d_lp} \ref{tab:e_lp}). In the end, $\chi$ values did not change that much over the range of $\alpha$ values. In the future, an average value of $\chi$ could be used.
 
 \begin{equation}
-\Large
 \Big\langle R^2 \Big\rangle = 2l_p - 2l_p^2 \left(1 - e^{L/l_p} \right)
 \label{eq:wlc_msqr}
 \end{equation}
@@ -769,7 +769,6 @@ Torsion angle histograms at different values of $\alpha$ (Figure \ref{fig:a_0_hi
 The second rank orientational order tensor Q (Eq.~\ref{eq:Q}) was used to calculate the director and the S order parameter for each chain. The vectors used to describe chain planarity were the unit normal vectors ($\hat{e}$) to each thiophene ring along the chain (depicted in Fig.~\ref{fig:pt_vecs}). In Eq.~\ref{eq:Q}, $\hat{e} \otimes \hat{e}$ represents the outer product, which is equivalent to matrix multiplication of the column vector $\hat{e}$ and row vector $\hat{e}$. Additionally, $\mathds{1}$ represents the identity matrix. The parameter S and the director were determined by diagonalizing Q, where S is the largest eigenvalue and the director is the corresponding eigenvector \cite{Allen2017}.
 
 \begin{equation}
-\Large
 \overleftrightarrow{Q} = \frac{1}{2N} \sum_{i=1}^{N} 3\hat{e_i} \otimes \hat{e_i} - \mathds{1}
 \label{eq:Q}
 \end{equation}
