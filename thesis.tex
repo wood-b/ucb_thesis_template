@@ -8,6 +8,7 @@
 %\usepackage{biblatex}
 \usepackage[backend=biber, sorting=none]{biblatex}
 \usepackage{rotating} % provides sidewaystable and sidewaysfigure
+% all of the packages below are optional feel free to remove if you don't use them
 \usepackage{textcomp} % degrees symbol
 \usepackage{siunitx} % units
 \usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig}
@@ -15,7 +16,8 @@
 \usepackage{caption} % for tables and figures
 \captionsetup[table]{skip=4pt} % sets a default padding for tables
 \usepackage{dsfont} % matrix notation
-\usepackage{xr} %cross ref between files
+\usepackage{xr} % cross ref between files
+\usepackage{lipsum} % for random text remove for your actual dissertation
 
 % the code below is make a abs symbol and fraction without the bar
 \usepackage{mathtools}
@@ -24,15 +26,10 @@
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 % end of abs and custom frac
 
-% hyperref colors
-%\hypersetup{
-  %colorlinks,
-  %citecolor=violet,
-  %linkcolor=black,
-  %urlcolor=blue}
+% this sets the color of hyperlinks
 \hypersetup{colorlinks=true, citecolor=black, linkcolor=black, urlcolor=blue}
 
-%footnote stuff
+%footnote stuff -- this doesn't allow a footnote to spread across multiple pages
 \interfootnotelinepenalty=10000
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
@@ -53,7 +50,7 @@
 \newtheorem{theorem}{Jibberish}
 
 %\bibliography{thesis_1}
-\addbibresource{thesis_6.bib}
+\addbibresource{thesis.bib} % if using biblatex
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
@@ -62,14 +59,14 @@
 
 % Declarations for Front Matter
 
-\title{Structural Insights for Molecular Design of Conjugated Molecules and Polymers}
+\title{How to Ride Monsters}
 \author{Brandon Wood}
 \degreesemester{Summer}
 \degreeyear{2019}
 \degree{Doctor of Philosophy}
-\chair{Professor Kristin A. Persson}
-\othermembers{Professor Phillip L. Geissler\\
-Professor Daryl C. Chrzan}
+\chair{Professor Kelly Slater}
+\othermembers{Professor Andy Irons\\
+Professor John-John Florence}
 
 
 % For a co-chair who is subordinate to the \chair listed above
@@ -80,7 +77,7 @@ Professor Daryl C. Chrzan}
 % Previous degrees are no longer to be listed on the title page.
 % \prevdegrees{B.A. (University of Northern South Dakota at Hoople) 1978 \\
 %   M.S. (Ed's School of Quantum Mechanics and Muffler Repair) 1989}
-\field{Applied Science and Technology}
+\field{Advanced Wave Riding}
 % Designated Emphasis -- this is optional, and rare
 % \emphasis{Colloidal Telemetry}
 % This is optional, and rare
@@ -95,7 +92,7 @@ Professor Daryl C. Chrzan}
 
 \maketitle
 % Delete (or comment out) the \approvalpage line for the final version.
-%\approvalpage
+\approvalpage
 \copyrightpage
 
 \include{abstract}
@@ -105,7 +102,7 @@ Professor Daryl C. Chrzan}
 \begin{dedication}
 \null\vfil
 \begin{center}
-To Mom, Dad, and Linds\\\vspace{12pt}
+Dedication here\\\vspace{12pt}
 \end{center}
 \vfil\null
 \end{dedication}
@@ -120,17 +117,7 @@ To Mom, Dad, and Linds\\\vspace{12pt}
 \listoftables
 
 \begin{acknowledgements}
-  My time at Berkeley has been some of the best years of my life, both personally and professionally, largely due to the people around me. I have many to recognize, but above anyone else I would like to thank my advisor Kristin Persson. Kristin has provided unending support and guidance, and most importantly, empowered me to explore my own research ideas. In addition, I am extremely appreciative of the culture Kristin has instilled in her research group. Over the years, many Persson group members have contributed to my work and for that I am eternally grateful. Yongwoo Shin introduced me to conjugated polymers and put up with my constant stream of questions. Julian Self has been a fantastic person to discuss research with, and I am grateful for all our time spent together. Also, I would like to thank Shyam Dwaraknath and Sam Blau for the numerous scientific and non-scientific discussions and all of the writing and programming feedback.
-
-  Other influential figures during my tenure at Berkeley were committee members Phill Geissler and Daryl Chrzan. Phill welcomed me into his group and taught me statistical mechanics in his graceful style. Daryl Chrzan educated me on the value of simple models, and we were able to enjoy our commonalities of growing up in Wisconsin and our joy for surfing.
-
-  All of the work I accomplished at Berkeley would not have been possible without my friends. They provided balance and supported me through all the ups and downs of graduate school and life. Zack Phillips has been a great friend; he introduced me to surfing (a priceless gift) and never shied away from taking a surf break when it was necessary. I want to extend a special thanks to Alex Forse for all the help writing and inspiring me with his passion for science and surfing. Also, I am also very grateful to Chris Lalau-Keraly for showing me the ways of the ocean and ensuring I have balance in my life and on my surfboard. Finally, I want to thank Jon Morris, Mika Endo, JB and Mike Chapman, Alix and Mike Mains, Ben Fildier, Helen Picot, Rebecca Barter, Dan Wooten, Juno Fitzpatrick, Charlotte Cramer, Charlie Williams-Brown, Raphaële Clément, and others for all the activities and adventures in California and beyond.
-
-  Throughout my graduate studies my parents, Kerri and Dan, and my sister Lindsey have been a constant source of inspiration and encouragement. I credit my parents for providing me with the determination to see something to completion, and my sister for showing me how to deal with adversity. I also credit my grandfather Leonard Cook for imparting his curious and creative nature on me.
-
-  I owe a great debt of gratitude to Fiona Doyle and Ken Valentas for helping me get into a doctoral program at Berkeley. I would not be where I am today without them. Ken has been a long-time mentor and I can only hope to impact someone’s life as positively as he as impacted mine.
-
-  Last, but certainly not least, I would like to thank the Department of Energy for financial support throughout my graduate studies at Berkeley.
+Thank everyone here
 
 \end{acknowledgements}
 
@@ -141,15 +128,14 @@ To Mom, Dad, and Linds\\\vspace{12pt}
 % (Optional) \part{First Part}
 
 \include{chap1_intro}
-\include{chap2_torsion_model}
-\include{chap3_aromaticity}
+\include{chap2_wave_physics}
+\include{chap3_surfing_mech}
 \include{chap4_conclusion}
 %\include{chap1}
 %\include{chap2}
 
 \appendix
-\include{appendix_tor_model}
-\include{appendix_aroma}
+\include{appendix_wave_physics}
 % \chapter{More Monticello Candidates}
 \printbibliography
 
